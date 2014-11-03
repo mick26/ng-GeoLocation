@@ -1,0 +1,48 @@
+<!--
+
+https://github.com/arunisrael/angularjs-geolocation
+https://github.com/ninjatronic/ngGeolocation#usage
+
+Promises:
+https://docs.angularjs.org/api/ng/service/$q
+
+Tool to check coordinates:
+http://boulter.com/gps/
+
+Simple Web Server:
+python -m SimpleHTTPServer
+
+-->
+
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GeoLocation</title>
+</head>
+
+
+<body>
+
+	<h1>GeoLocation</h1>
+	<div ng-controller="GeoCtrl">
+      <p>My location is: <br/>
+      	Latitude {{coords.lat}} <br/>
+		Longitude {{coords.long}} <br/>
+		<p>{{GeoError}}</p>
+      </p>
+    </div>
+
+
+	<!-- JS -->
+	<script src='bower_components/angular/angular.min.js'></script>
+   	<script src='bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js'></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+
+</body>
+</html>
